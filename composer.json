@@ -13,5 +13,12 @@
         "thepixeldeveloper/sitemap": "5.*",
         "smarty/smarty": "3.1.*",
         "rockschtar/wordpress-datetime": "2.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rockschtar\\WordPress\\Sitemaps\\": "src/",
+            "Rockschtar\\WordPress\\Sitemaps\\Tests\\": "tests/"
+        }
     }
+
 }
