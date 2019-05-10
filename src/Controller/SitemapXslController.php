@@ -6,8 +6,10 @@
  * Time: 14:39
  */
 
-namespace Rockschtar\Wordpress\Sitemaps\Controller;
+namespace Rockschtar\WordPress\Sitemaps\Controller;
 
+
+use Smarty;
 
 final class SitemapXslController {
     public const SITEMAP_XSL_QUERY_VARS = array('validio_wpu_sitemap_xsl', 'validio_wpu_sitemap_type');
@@ -36,9 +38,7 @@ final class SitemapXslController {
 
     final public function sitemap_xsl_rewrite_rule($wp_rewrite) {
 
-        $new_rules = array(
-            self::SITEMAP_XSL_NAME . '-(.+?)\.xsl$' => 'index.php?validio_wpu_sitemap_xsl=1&validio_wpu_sitemap_type=$matches[1]',
-        );
+        $new_rules = array(self::SITEMAP_XSL_NAME . '-(.+?)\.xsl$' => 'index.php?validio_wpu_sitemap_xsl=1&validio_wpu_sitemap_type=$matches[1]',);
 
         $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
         return $wp_rewrite->rules;
@@ -50,7 +50,7 @@ final class SitemapXslController {
         if ('1' === $sitemap_xsl) {
             header('Content-type: text/xml');
             $sitemap_type = get_query_var('validio_wpu_sitemap_type');
-            $smarty = new \Smarty;
+            $smarty = new Smarty;
 
             $smarty->setCompileDir(WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'uploads/wordpress-sitemaps/smarty/templates_c');
             $smarty->setCacheDir(WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'uploads/wordpress-sitemaps/smarty/cache');
