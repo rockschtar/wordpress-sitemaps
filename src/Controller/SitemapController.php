@@ -33,11 +33,11 @@ abstract class SitemapController {
 
 	}
 
-	final public static function &init(string $sitemap_id) {
+	final public static function &init() {
 		/** @noinspection ClassConstantCanBeUsedInspection */
 		$class = \get_called_class();
 		if(!isset(self::$_instances[ $class ])) {
-			self::$_instances[ $class ] = new $class($sitemap_id);
+			self::$_instances[ $class ] = new $class();
 		}
 
 		return self::$_instances[ $class ];
