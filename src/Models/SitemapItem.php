@@ -6,7 +6,7 @@
  * Time: 16:48
  */
 
-namespace Rockschtar\Wordpress\Sitemaps\Models;
+namespace Rockschtar\WordPress\Sitemaps\Models;
 
 
 class SitemapItem extends SitemapIndexItem {

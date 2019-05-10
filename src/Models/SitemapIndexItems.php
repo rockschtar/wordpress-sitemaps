@@ -1,5 +1,6 @@
 <?php
-namespace Rockschtar\Wordpress\Sitemaps\Models;
+
+namespace Rockschtar\WordPress\Sitemaps\Models;
 
 /**
  * Class SitemapIndexItems

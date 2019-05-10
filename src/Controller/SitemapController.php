@@ -6,13 +6,14 @@
  * Time: 14:48
  */
 
-namespace Rockschtar\Wordpress\Sitemaps\Controller;
+namespace Rockschtar\WordPress\Sitemaps\Controller;
 
 use Rockschtar\Wordpress\Sitemaps\Models\SitemapIndexItems;
 use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
 use Thepixeldeveloper\Sitemap\Sitemap;
 use Thepixeldeveloper\Sitemap\SitemapIndex;
 use Thepixeldeveloper\Sitemap\Urlset;
+use function get_called_class;
 
 
 abstract class SitemapController {
@@ -35,7 +36,7 @@ abstract class SitemapController {
 
 	final public static function &init() {
 		/** @noinspection ClassConstantCanBeUsedInspection */
-		$class = \get_called_class();
+        $class = get_called_class();
 		if(!isset(self::$_instances[ $class ])) {
 			self::$_instances[ $class ] = new $class();
 		}

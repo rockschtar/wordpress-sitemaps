@@ -6,7 +6,7 @@
  * Time: 11:56
  */
 
-namespace Rockschtar\Wordpress\Sitemaps\Models;
+namespace Rockschtar\WordPress\Sitemaps\Models;
 
 class SitemapItems {
 
