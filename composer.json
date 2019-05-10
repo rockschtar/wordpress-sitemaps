@@ -1,0 +1,17 @@
+{
+    "name": "rockschtar/wordpress-sitemaps",
+    "description": "Library to create custom sitemaps with abstract sitemap controller ",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Helmer",
+            "email": "rockschtar@gmail.com"
+        }
+    ],
+    "require": {
+        "thepixeldeveloper/sitemap": "5.*",
+        "smarty/smarty": "3.1.*",
+        "rockschtar/wordpress-datetime": "2.0.*"
+    }
+}
