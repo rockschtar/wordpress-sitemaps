@@ -41,7 +41,7 @@ class SitemapIndexItem {
 
 
     public function getLastModifiedDateTime() : DateTime {
-        return DateTimeUtils::convertTimestampToWordPressDateTime($this->getLastModifiedTimestamp());
+        return wpdtu_timestamp_to_wp_datetime($this->getLastModifiedTimestamp());
     }
 
     public function getLastModifiedDateW3C() : string {
