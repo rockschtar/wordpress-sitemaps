@@ -135,7 +135,7 @@ abstract class SitemapController {
 		}
 	}
 
-	final public function redirect_canonical($redirect): bool {
+	final public function redirect_canonical($redirect) {
 		$query_var = get_query_var($this->getQueryVarPage());
 		if(!empty($query_var)) {
 			return false;
